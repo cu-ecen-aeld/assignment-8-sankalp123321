@@ -20,6 +20,8 @@ echo "Running test with user $(whoami)"
 
 set +e
 
+./clean.sh
+
 # If there's a configuration for the assignment number, use this to look for
 # additional tests
 if [ -f conf/assignment.txt ]; then
