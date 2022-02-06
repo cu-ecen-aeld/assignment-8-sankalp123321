@@ -1,1 +1,1 @@
-include $(sort $(wildcard /home/sankalp/Desktop/AESD/assignment-4-sankalp123321/base_external/package/*/*.mk))
+include $(sort $(wildcard $(BR2_EXTERNAL_project_base_PATH)/package/*/*.mk))
