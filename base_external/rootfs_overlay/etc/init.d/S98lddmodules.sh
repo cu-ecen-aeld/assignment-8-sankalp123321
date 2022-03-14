@@ -1,16 +1,20 @@
 #! /bin/sh
 case "$1" in
     start)
-        echo  "Starting scull"
-        /usr/bin/scull_load
-	/usr/bin/module_load faulty
-	modprobe hello
+	echo "Starting aesdchar"
+        #echo  "Starting scull"
+        #/usr/bin/scull_load
+	#/usr/bin/module_load faulty
+	#modprobe hello
+	/usr/bin/aesdchar_load
         ;;
     stop)
-        echo "Stopping scull"
-        /usr/bin/scull_unload
-	/usr/bin/module_unload faulty
-	rmmod hello
+	echo "Stopping aesdchar"
+	/usr/bin/aesdchar_unload
+        #echo "Stopping scull"
+        #/usr/bin/scull_unload
+	#/usr/bin/module_unload faulty
+	#rmmod hello
         ;;
     *)
     echo "Usage :  $0 {start|stop}"

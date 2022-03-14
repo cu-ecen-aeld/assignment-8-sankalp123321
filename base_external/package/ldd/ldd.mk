@@ -14,13 +14,19 @@ LDD_SITE = git@github.com:cu-ecen-aeld/assignment-7-sankalp123321.git
 LDD_SITE_METHOD = git
 LDD_GIT_SUBMODULES = YES
 
-LDD_MODULE_SUBDIRS = scull/
-LDD_MODULE_SUBDIRS += misc-modules/
+#LDD_MODULE_SUBDIRS = scull/
+#LDD_MODULE_SUBDIRS += misc-modules/
+LDD_OVERRIDE_SRCDIR = /home/sankalp13392/assignments-3-and-later-sankalp123321
+LDD_MODULE_SUBDIRS += aesd-char-driver/
+
+
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
 define LDD_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 $(@D)/scull/* $(TARGET_DIR)/usr/bin
-	$(INSTALL) -m 0755 $(@D)/misc-modules/* $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_unload $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_unload $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment8-buildroot/* $(TARGET_DIR)/usr/bin
+	#$(INSTALL) -m 0755 $(@D)/misc-modules/* $(TARGET_DIR)/usr/bin
 endef
 
 $(eval $(kernel-module))
