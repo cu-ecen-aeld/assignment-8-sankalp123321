@@ -20,7 +20,7 @@ AESD_LDD_MODULE_SUBDIRS += aesd-char-driver/
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
 define AESD_LDD_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_unload $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_load $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_unload $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment8-buildroot/* $(TARGET_DIR)/usr/bin
 endef
